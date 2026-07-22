@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShotBox — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem;
+    color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #131313; } }
+  h1 { font-size: 1.9rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.25rem; margin-top: 2.5rem; border-bottom: 1px solid #8883; padding-bottom: .3rem; }
+  h3 { font-size: 1.02rem; margin-top: 1.6rem; }
+  .updated { color: #7a7a7a; font-size: .92rem; margin-top: 0; }
+  .callout { border-left: 3px solid #4a86e8; padding: .6rem 0 .6rem 1rem; margin: 1.5rem 0; background: #4a86e80f; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { border: 1px solid #8884; padding: .5rem .65rem; text-align: left; vertical-align: top; }
+  th { background: #8881; }
+  code { background: #8882; padding: .12rem .35rem; border-radius: 3px; font-size: .9em; }
+  ul { padding-left: 1.3rem; }
+  li { margin: .3rem 0; }
+  footer { margin-top: 3.5rem; padding-top: 1rem; border-top: 1px solid #8883; color: #7a7a7a; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>ShotBox Privacy Policy</h1>
+<p class="updated">Last updated: 22 July 2026</p>
+
+<div class="callout">
+  <strong>In short:</strong> your photos and videos stay in your own Google Drive. ShotBox never
+  uploads, copies or stores them on our servers. We keep a small amount of account information —
+  your email address, your subscription status and a notification token — so that sign-in,
+  subscriptions and notifications work. We do not sell your data or use it for advertising.
+</div>
+
+<h2>Who we are</h2>
+<p>
+  ShotBox ("the app", "we", "us") is an Android photo album app that stores your albums in your
+  own Google Drive. This policy explains what information the app handles and why.
+</p>
+<p>Contact for privacy questions: <a href="mailto:redskyroad@gmail.com">redskyroad@gmail.com</a></p>
+
+<h2>Google user data we access</h2>
+<p>
+  When you connect Google Drive, ShotBox requests the following OAuth scope:
+</p>
+<p><code>https://www.googleapis.com/auth/drive</code></p>
+<p>
+  Google presents this as <em>"See, edit, create and delete all of your Google Drive files."</em>
+  That wording is Google's, and it is accurate: Google grants this level of access on an
+  all-or-nothing basis. We want to be direct about that rather than imply the access is narrower
+  than it is.
+</p>
+
+<h3>What ShotBox actually does with that access</h3>
+<ul>
+  <li>Creates its own album folders in your Drive and works inside them</li>
+  <li>Uploads photos and videos from albums you choose to back up</li>
+  <li>Reads albums that other people have shared with you, so you can view and save them</li>
+  <li>Shares your albums with people you choose, and revokes that sharing when you ask</li>
+  <li>Stores two small settings files (<code>_config.json</code> and <code>_themes.json</code>)
+      alongside your albums, holding preferences such as cover photos and theme choices</li>
+  <li>Downloads photos you open or save, to your device</li>
+</ul>
+<p>
+  ShotBox does not read, modify, or delete any other file in your Drive.
+</p>
+
+<h3>Why a narrower permission is not used</h3>
+<p>
+  Google offers a narrower alternative (<code>drive.file</code>) that limits an app to files it
+  created. We tested whether ShotBox could work within it, and it cannot: that permission cannot
+  discover folders that other people have shared with you, and selecting a shared folder through
+  the Google Picker grants access to the folder itself but returns none of the photos inside it.
+  Receiving shared albums is a core feature of ShotBox, so the broader permission is required for
+  the app to function.
+</p>
+
+<h2>Information we store on our servers</h2>
+<p>
+  ShotBox uses Google Firebase. The following is stored under your account identifier:
+</p>
+<table>
+  <tr><th>What</th><th>Why</th></tr>
+  <tr>
+    <td>Email address and Google account identifier (Firebase Authentication)</td>
+    <td>To sign you in and link your subscription to your account</td>
+  </tr>
+  <tr>
+    <td>Subscription status and Google Play purchase token (Cloud Firestore)</td>
+    <td>To verify your subscription with Google Play and unlock paid features</td>
+  </tr>
+  <tr>
+    <td>Notification token (Firebase Cloud Messaging)</td>
+    <td>To notify your device silently when a subscription changes or lapses</td>
+  </tr>
+  <tr>
+    <td>App usage and device information (Firebase Analytics)</td>
+    <td>To understand crashes and which features are used, in aggregate</td>
+  </tr>
+</table>
+
+<div class="callout">
+  <strong>Your photos are not in that list, and never will be.</strong> Photos and videos are
+  transferred directly between your device and your own Google Drive. They do not pass through,
+  and are not stored on, any server we control.
+</div>
+
+<h2>Information stored on your device</h2>
+<ul>
+  <li>Cached copies of photos and thumbnails you have viewed, to avoid re-downloading them</li>
+  <li>Your app settings and preferences</li>
+  <li>Photos you explicitly choose to save, written to your device's normal Photos storage</li>
+</ul>
+<p>Uninstalling ShotBox removes all of this from your device.</p>
+
+<h2>What we never do</h2>
+<ul>
+  <li>We do not sell your personal information</li>
+  <li>We do not transfer your Google user data to third parties, except as needed to provide the
+      app's features or where required by law</li>
+  <li>We do not use your Google user data for advertising</li>
+  <li>We do not use humans to read your data, except with your explicit permission for support,
+      for security purposes, or where required by law</li>
+</ul>
+
+<h2>Limited Use disclosure</h2>
+<p>
+  ShotBox's use and transfer of information received from Google APIs to any other app will adhere
+  to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google
+  API Services User Data Policy</a>, including the Limited Use requirements.
+</p>
+
+<h2>Keeping and deleting your data</h2>
+<h3>Revoking Drive access</h3>
+<p>
+  You can withdraw ShotBox's access to your Google Drive at any time at
+  <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com</a>
+  under Data &amp; privacy → Third-party apps &amp; services. Your albums remain in your Drive;
+  ShotBox simply stops being able to reach them.
+</p>
+<h3>Deleting your account data</h3>
+<p>
+  To have the information we hold (email address, subscription record and notification token)
+  deleted, email <a href="mailto:redskyroad@gmail.com">redskyroad@gmail.com</a> from the address
+  associated with your account. We will delete it within 30 days, other than records we are
+  required to keep for tax or legal reasons. Deleting this information does not affect the albums
+  in your own Google Drive, which remain yours.
+</p>
+
+<h2>Children</h2>
+<p>
+  ShotBox is not directed at children under 13, and we do not knowingly collect information from
+  them.
+</p>
+
+<h2>Changes to this policy</h2>
+<p>
+  If this policy changes materially — particularly regarding what data we access or why — we will
+  update this page and revise the date at the top.
+</p>
+
+<footer>
+  ShotBox — Privacy Policy · Last updated 22 July 2026 ·
+  <a href="mailto:redskyroad@gmail.com">redskyroad@gmail.com</a>
+</footer>
+
+</body>
+</html>
