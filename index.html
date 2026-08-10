@@ -29,7 +29,7 @@
 <body>
 
 <h1>ShotBox Privacy Policy</h1>
-<p class="updated">Last updated: 22 July 2026</p>
+<p class="updated">Last updated: 10 August 2026</p>
 
 <div class="callout">
   <strong>In short:</strong> your photos and videos stay in your own Google Drive. ShotBox never
@@ -119,6 +119,55 @@
 </ul>
 <p>Uninstalling ShotBox removes all of this from your device.</p>
 
+<h2>How we protect your data</h2>
+<p>
+  We use security procedures to protect the confidentiality and integrity of the information
+  ShotBox handles, including your Google user data.
+</p>
+<ul>
+  <li><strong>Encryption in transit.</strong> All communication between the app, Google Drive and
+      our Firebase backend is encrypted using HTTPS/TLS. ShotBox makes no unencrypted network
+      requests.</li>
+  <li><strong>Encryption at rest.</strong> The account information we hold (see above) is stored in
+      Google Cloud Firestore and Firebase Authentication, which encrypt stored data at rest by
+      default using Google-managed encryption keys.</li>
+  <li><strong>Encryption on your device.</strong> Sensitive local state, including your
+      subscription entitlement, is stored using Android's
+      <code>EncryptedSharedPreferences</code> (AES-256), so it is encrypted in the app's private
+      storage rather than held in plain text.</li>
+  <li><strong>Authenticated access only.</strong> Server-side data can only be reached through
+      authenticated Cloud Functions that verify the signed-in user's identity and reject
+      unauthenticated requests. Each user's record is keyed to their own account identifier, so one
+      user's data cannot be requested by another.</li>
+  <li><strong>OAuth tokens.</strong> ShotBox uses Android's Google Sign-In and Credential Manager
+      to obtain access tokens. Tokens are held only in memory for the life of the session and are
+      never written to our servers or to persistent storage.</li>
+  <li><strong>Least access.</strong> The Firebase project holding this data is accessible only to
+      ShotBox's developer; no other person or company has access to it.</li>
+  <li><strong>Your photos are not exposed to us at all.</strong> Photos and videos move directly
+      between your device and your own Google Drive over TLS. Because they are never transmitted to
+      or stored on any server we operate, they cannot be accessed, read or disclosed by us.</li>
+</ul>
+<p>
+  No method of transmission or storage is completely secure, but these measures are intended to
+  protect your information against unauthorised access, disclosure, alteration and destruction.
+</p>
+
+<h2>How long we keep your data</h2>
+<ul>
+  <li>Your account information (email address and account identifier), subscription record and
+      notification token are retained for as long as your ShotBox account exists, because they are
+      needed to sign you in and to keep your subscription working.</li>
+  <li>Analytics data is retained in aggregate, in line with Firebase Analytics' standard retention
+      period, and is not used to identify you individually.</li>
+  <li>If you ask us to delete your data, we remove it within 30 days, other than records we are
+      required to keep for tax or legal reasons, which are held only for the period the law
+      requires.</li>
+  <li>When a retention period expires for a given type of data, that data is deleted.</li>
+  <li>Photos and videos in your Google Drive are not subject to our retention: they are yours, held
+      in your own Drive, and remain there until you delete them.</li>
+</ul>
+
 <h2>What we never do</h2>
 <ul>
   <li>We do not sell your personal information</li>
@@ -173,7 +222,7 @@
 </p>
 
 <footer>
-  ShotBox — Privacy Policy · Last updated 22 July 2026 ·
+  ShotBox — Privacy Policy · Last updated 10 August 2026 ·
   <a href="mailto:redskyroad@gmail.com">redskyroad@gmail.com</a>
 </footer>
 
